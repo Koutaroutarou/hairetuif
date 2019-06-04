@@ -8,63 +8,47 @@
 
 import UIKit
 
+
+
+class Monster {
+    
+    var nameArray: [String] = ["コナン", "あゆみちゃん", "元太くん", "光彦", "灰原"]
+    
+    var imageArray: [UIImage] = [UIImage(named: "conan.png")!,
+                                 UIImage(named: "ayumi.png.jpg")!,
+                                 UIImage(named: "genta.png.jpg")!,
+                                 UIImage(named: "mitsuhiko.png")!,
+                                 UIImage(named: "haibara.png")!
+                                ]
+}
+
+
 class ViewController: UIViewController {
     
     @IBOutlet var image: UIImageView!
     @IBOutlet var namelabel: UILabel!
     
-    var number: Int = 0
+    var position: Int = 0
     
     let monster = Monster()
     
     
     @IBAction func back() {
-        if number == 0 || number == 5 {
-            image.image = monster.imageArray[4]
-            namelabel.text = monster.nameArray[4]
-            number = 1
-        } else if number == 1 {
-            image.image = monster.imageArray[3]
-            namelabel.text = monster.nameArray[3]
-            number = 2
-        } else if number == 2 {
-            image.image = monster.imageArray[2]
-            namelabel.text = monster.nameArray[2]
-            number = 3
-        } else if number == 3 {
-            image.image = monster.imageArray[1]
-            namelabel.text = monster.nameArray[1]
-            number = 4
-        } else if number == 4 {
-            image.image = monster.imageArray[0]
-            namelabel.text = monster.nameArray[0]
-            number = 5
+        position -= 1
+        if position < 0 {
+            position = 4
         }
-        
+        image.image = monster.imageArray[position]
+        namelabel.text = monster.nameArray[position]
     }
     
     @IBAction func next() {
-        if number == 0 || number == 5 {
-            image.image = monster.imageArray[1]
-            namelabel.text = monster.nameArray[1]
-            number = 4
-        } else if number == 4 {
-            image.image = monster.imageArray[2]
-            namelabel.text = monster.nameArray[2]
-            number = 3
-        } else if number == 3 {
-            image.image = monster.imageArray[3]
-            namelabel.text = monster.nameArray[3]
-            number = 2
-        } else if number == 2 {
-            image.image = monster.imageArray[4]
-            namelabel.text = monster.nameArray[4]
-            number = 1
-        } else if number == 1 {
-            image.image = monster.imageArray[0]
-            namelabel.text = monster.nameArray[0]
-            number = 5
+        position += 1
+        if position > 4 {
+            position = 0
         }
+        image.image = monster.imageArray[position]
+        namelabel.text = monster.nameArray[position]
     }
     
     

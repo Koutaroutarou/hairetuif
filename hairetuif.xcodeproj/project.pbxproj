@@ -14,7 +14,6 @@
 		F91D49D4229D4AF1008BA310 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91D49D2229D4AF1008BA310 /* LaunchScreen.storyboard */; };
 		F91D49DF229D4AF1008BA310 /* hairetuifTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D49DE229D4AF1008BA310 /* hairetuifTests.swift */; };
 		F91D49EA229D4AF1008BA310 /* hairetuifUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D49E9229D4AF1008BA310 /* hairetuifUITests.swift */; };
-		F94D0533229F7A7B00277ED8 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94D0532229F7A7B00277ED8 /* Monster.swift */; };
 		F94D057822A3741C00277ED8 /* mitsuhiko.png in Resources */ = {isa = PBXBuildFile; fileRef = F94D057322A3741C00277ED8 /* mitsuhiko.png */; };
 		F94D057922A3741C00277ED8 /* genta.png.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94D057422A3741C00277ED8 /* genta.png.jpg */; };
 		F94D057A22A3741C00277ED8 /* haibara.png in Resources */ = {isa = PBXBuildFile; fileRef = F94D057522A3741C00277ED8 /* haibara.png */; };
@@ -54,7 +53,6 @@
 		F91D49E5229D4AF1008BA310 /* hairetuifUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hairetuifUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91D49E9229D4AF1008BA310 /* hairetuifUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hairetuifUITests.swift; sourceTree = "<group>"; };
 		F91D49EB229D4AF1008BA310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F94D0532229F7A7B00277ED8 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		F94D057322A3741C00277ED8 /* mitsuhiko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mitsuhiko.png; sourceTree = "<group>"; };
 		F94D057422A3741C00277ED8 /* genta.png.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = genta.png.jpg; sourceTree = "<group>"; };
 		F94D057522A3741C00277ED8 /* haibara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haibara.png; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 		F91D49C8229D4AEC008BA310 /* hairetuif */ = {
 			isa = PBXGroup;
 			children = (
-				F94D0532229F7A7B00277ED8 /* Monster.swift */,
 				F91D49C9229D4AEC008BA310 /* AppDelegate.swift */,
 				F91D49CB229D4AEC008BA310 /* ViewController.swift */,
 				F91D49CD229D4AEC008BA310 /* Main.storyboard */,
@@ -292,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91D49CC229D4AEC008BA310 /* ViewController.swift in Sources */,
-				F94D0533229F7A7B00277ED8 /* Monster.swift in Sources */,
 				F91D49CA229D4AEC008BA310 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
