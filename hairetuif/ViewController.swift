@@ -11,15 +11,8 @@ import UIKit
 
 
 class Monster {
-    
-    var nameArray: [String] = ["コナン", "あゆみちゃん", "元太くん", "光彦", "灰原"]
-    
-    var imageArray: [UIImage] = [UIImage(named: "conan.png")!,
-                                 UIImage(named: "ayumi.png.jpg")!,
-                                 UIImage(named: "genta.png.jpg")!,
-                                 UIImage(named: "mitsuhiko.png")!,
-                                 UIImage(named: "haibara.png")!
-                                ]
+    var name: String!
+    var image: UIImage!
 }
 
 
@@ -30,35 +23,63 @@ class ViewController: UIViewController {
     
     var position: Int = 0
     
-    let monster = Monster()
+    var monster1 = Monster()
     
+    var monster2 = Monster()
+    
+    var monster3 = Monster()
+    
+    var monsterArray: [Monster] = []
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        monster1.name = "コナン"
+        monster1.image = UIImage(named: "conan.png")
+        
+        monster2.image = UIImage(named: "haibara.png")
+        monster2.name = "灰原"
+        
+        monster3.image = UIImage(named: "mitsuhiko.png")
+        monster3.name = "光彦"
+        
+        monsterArray.append(monster1)
+        monsterArray.append(monster2)
+        monsterArray.append(monster3)
+        
+        print(monsterArray)
+    }
+    
+   
     
     @IBAction func back() {
         position -= 1
         if position < 0 {
-            position = 4
+            position = 2
         }
-        image.image = monster.imageArray[position]
-        namelabel.text = monster.nameArray[position]
+        image.image = monsterArray[position].image
+        namelabel.text = monsterArray[position].name
+//        image.image = monster.imageArray[position]
+//        namelabel.text = monster.nameArray[position]
     }
     
     @IBAction func next() {
         position += 1
-        if position > 4 {
+        if position > 2 {
             position = 0
         }
-        image.image = monster.imageArray[position]
-        namelabel.text = monster.nameArray[position]
+        
+        image.image = monsterArray[position].image
+        namelabel.text = monsterArray[position].name
+        
+//        image.image = monster.imageArray[position]
+//        namelabel.text = monster.nameArray[position]
     }
     
     
     
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
 
 }
